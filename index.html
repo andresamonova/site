@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pangolin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Website</title>
+</head>
+<body>
+    <header>
+        <section class="head">
+            <div class="container">
+                <div class="width-6 headback">
+                    <h1 class="blended centered nosel">ANDRE SAMONOVA PORTFOLIO SITE</h1>
+                    <h3 class="blended centered himargin nosel" id="randomText"></h3>
+                    <nav>
+                        <ul class="links">
+                            <li><a href="index.html" class="button rounded"><h3 class="blended nosel">Home</h3></a></li>
+                            <li><a href="portfolio.html" class="button rounded"><h3 class="blended nosel">Portfolio</h3></a></li>
+                            <li><a href="about.html" class="button rounded"><h3 class="blended nosel">About</h3></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <div class="width-1"></div>
+            <div class="width-4 rounded paper">
+                <p class="blended">Hello, I'm Andre Samonova and this is my website.</p>
+            </div>
+            <div class="width-1"></div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $.get('randomline.txt', function(data) {
+          var texts = data.split("\n");
+          $('#randomText').html(texts[Math.floor(Math.random() * texts.length)]);
+        });
+      });
+    </script>
+</body>
+</html>
